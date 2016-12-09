@@ -1,0 +1,35 @@
+extends _layouts/base
+
+include _modules/link/link
+
+block content
+  .container
+    .comp__video
+      .comp__media
+        video(class="video-snippet background-video background-media", autoplay='' loop='' muted='false' poster="videos/video-hero/poster.jpg" id="video" data-video)
+          source(src="videos/video-hero/video-hero.mp4", type="video/mp4")
+          source(src="videos/video-hero/video-hero.webm", type="video/webm")
+          source(src="videos/video-hero/video-hero.ogg", type="video/ogg")
+        #video-controls
+          .progress-bar
+            span.line
+            .progress
+              .bufferBar
+              .time-bar
+                span.line
+          .button-group
+            button#mute(type='button')
+              .icon.icon--speaker
+                svg
+                  use(xlink:href="images/svg-sprite.svg#icon--speaker")
+            button#play-pause.pause(type='button')
+              .icon.icon--play
+                svg
+                  use(xlink:href="images/svg-sprite.svg#icon--play")
+              .icon.icon--pause
+                svg
+                  use(xlink:href="images/svg-sprite.svg#icon--pause")
+            button#fullscreen(type='button')
+              .icon.icon--fullscreen
+                svg
+                  use(xlink:href="images/svg-sprite.svg#icon--fullscreen")

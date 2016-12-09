@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon--play" viewBox="0 0 17 20">
+		<polygon points="17,10 0,20 0,0"/>
+	</symbol>
+  <symbol id="icon--pause" viewBox="0 0 11 14">
+		<rect id="Rectangle-21" x="0" y="0" width="4" height="14"></rect>
+		<rect id="Rectangle-21-Copy" x="7" y="0" width="4" height="14"></rect>
+	</symbol>
+  <symbol id="icon--speaker" viewBox="0 0 23 20">
+		<path d="M3,7 L0,7 L0,14 L3,14 L13,20 L13,0 L3,7 Z M19.914168,17.3242829 C23.819411,13.41904 23.819411,7.08739022 19.914168,3.1821473 L18.4999545,4.59636086 C21.6241488,7.72055519 21.6241488,12.785875 18.4999545,15.9100694 L19.914168,17.3242829 Z M16.5355339,13.363961 C18.4881554,11.4113396 18.4881554,8.24551468 16.5355339,6.29289322 L15.1213203,7.70710678 C16.2928932,8.87867966 16.2928932,10.7781746 15.1213203,11.9497475 L16.5355339,13.363961 Z" id="Combined-Shape"></path>
+	</symbol>
+  <symbol id="icon--fullscreen" viewBox="0 0 20 20">
+    <g>
+        <polygon points="8 4 8 0 0 0 0 8 4 8 4 4 8 4"></polygon>
+        <polygon points="8 16 8 20 0 20 0 12 4 12 4 16 8 16"></polygon>
+        <polygon points="16 8 20 8 20 0 12 4.8985872e-16 12 4 16 4 16 8"></polygon>
+        <polygon points="16 12 20 12 20 20 12 20 12 16 16 16"></polygon>
+    </g>
+  </symbol>
+</svg>
