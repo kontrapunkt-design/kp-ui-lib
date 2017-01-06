@@ -1,0 +1,53 @@
+/*
+  if your content elements doesn't have a fixed width,
+  you can get issue when absolute positioning will be used
+  so you will need that rules
+*/
+.comp__pjax-load { position: relative } /* parent element where switch will be made */
+
+  .js-Pjax-child, h1 { width: 100% }
+
+  /* position for the elements that will be removed */
+  .js-Pjax-remove {
+    position: absolute;
+    left: 50%;
+    /* transform: translateX(-50%) */
+    /* transform can't be used since we already use generic translate for the remove effect (eg animate.css) */
+    /* margin-left: -width/2; // made with js */
+    /* you can totally drop the margin-left thing from switchesOptions if you use custom animations */
+  }
+
+/* CSS animations */
+.Animated {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+  .Animated--reverse { animation-direction: reverse }
+
+  .Animate--fast { animation-duration: .5s }
+  .Animate--noDelay { animation-delay: 0s !important;  }
+
+  .Animate--slideInRight { animation-name: Animation-slideInRight }
+  @keyframes Animation-slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100rem);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .Animate--slideInLeft { animation-name: Animation-slideInLeft }
+  @keyframes Animation-slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100rem);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
