@@ -1,6 +1,7 @@
 'use restrict'
 import Barba from 'barba.js';
 import $ from 'jquery';
+import gsap from 'gsap';
 
 
 export default () => {
@@ -26,7 +27,10 @@ export default () => {
        * this.oldContainer is the HTMLElement of the old Container
        */
 
-      return $(this.oldContainer).animate({ opacity: 0 }).promise();
+      return
+        $(this.oldContainer).animate({ opacity: 0 }, 400).promise();
+        TweenMax.staggerFromTo('.section--overview .item', 0.5, {scale:1, opacity:1}, {scale:0, opacity:0}, 0.2);
+        TweenMax.to('.section--content', 0.5, {scale:0, opacity:0});
     },
 
     fadeIn: function() {
@@ -46,6 +50,7 @@ export default () => {
         opacity : 0
       });
 
+
       $el.animate({ opacity: 1 }, 400, function() {
         /**
          * Do not forget to call .done() as soon your transition is finished!
@@ -54,6 +59,8 @@ export default () => {
 
         _this.done();
       });
+      TweenMax.staggerFromTo('.section--overview .item', 0.5, {scale:0, opacity:0}, {scale:1, opacity:1}, 0.2);
+      TweenMax.to('.section--content', 0.5, {scale:1, opacity:1});
     }
   });
   /**

@@ -1,10 +1,20 @@
-// Normalize Styles
-@import 'node_modules/normalize.css/normalize';
+@import 'normalize';
 
-// Import Modules
-@import '../_modules/link/link';
+// using local settings to overwrite foundation settings
+@import 'settings';
+// import foundation until
+@import 'util/_util';
+// Import atomic prerequisites
 @import 'prerequisites/prerequisites';
+// Import atomic design styles
+@import 'basics/basics';
+// @import 'motions/motions';
 @import 'components/components';
+@import 'layouts/layouts';
+// Import node vendors: foundation 6
+@import 'foundation';
+@include foundation-everything(true);
+
 
 
 // Box sizing partial styles:

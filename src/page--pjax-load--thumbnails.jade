@@ -1,0 +1,53 @@
+block head
+  - title = 'page title one'
+  - bodyClass = 'page-type--overview'
+
+extends _layouts/base--pjax
+
+block content
+  #barba-wrapper
+    .container.barba-container(data-namespace="grid")
+      .comp.comp__list--thumbnails
+        .row.collapse
+          .small-12.medium-6.large-4.column
+            .thumbnail.thumbnail--01
+              a(href="page--pjax-load--content-01.html")
+                .thumbnail--media
+                  img(src="images/image01.jpg")
+                .thumbnail--content
+                  p image title A
+          .small-12.medium-6.large-4.column
+            .thumbnail.thumbnail--02
+              a(href="page--pjax-load--content-02.html")
+                .thumbnail--media
+                  img(src="images/image02.jpg")
+                .thumbnail--content
+                  p image title B
+          .small-12.medium-6.large-4.column
+            .thumbnail.thumbnail--03
+              a(href="page--pjax-load--content-03.html")
+                .thumbnail--media
+                  img(src="images/image03.jpg")
+                .thumbnail--content
+                  p image title C
+          .small-12.medium-6.large-4.column
+            .thumbnail.thumbnail--03
+              a(href="page--pjax-load--content-04.html")
+                .thumbnail--media
+                  img(src="images/image04.jpg")
+                .thumbnail--content
+                  p image title D
+          .small-12.medium-6.large-4.column
+            .thumbnail.thumbnail--03
+              a(href="page--pjax-load--content-01.html")
+                .thumbnail--media
+                  img(src="images/image05.jpg")
+                .thumbnail--content
+                  p image title E
+          .small-12.medium-6.large-4.column
+            .thumbnail.thumbnail--03
+              a(href="page--pjax-load--content-01.html")
+                .thumbnail--media
+                  img(src="images/image06.jpg")
+                .thumbnail--content
+                  p image title F

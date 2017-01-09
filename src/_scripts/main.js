@@ -6,7 +6,6 @@
 import $ from 'jquery';
 // import Link from '../_modules/link/link';
 import compVideoControls from './components/compVideoControls';
-import compPjaxLoad from './components/compPjaxLoad';
 
 
 
@@ -14,5 +13,4 @@ $(() => {
   // new Link(); // Activate Link modules logic
   console.log('Welcome to Yeogurt!');
   compVideoControls();
-  compPjaxLoad();
 });

@@ -1,53 +1,82 @@
-/*
-  if your content elements doesn't have a fixed width,
-  you can get issue when absolute positioning will be used
-  so you will need that rules
-*/
-.comp__pjax-load { position: relative } /* parent element where switch will be made */
-
-  .js-Pjax-child, h1 { width: 100% }
-
-  /* position for the elements that will be removed */
-  .js-Pjax-remove {
-    position: absolute;
-    left: 50%;
-    /* transform: translateX(-50%) */
-    /* transform can't be used since we already use generic translate for the remove effect (eg animate.css) */
-    /* margin-left: -width/2; // made with js */
-    /* you can totally drop the margin-left thing from switchesOptions if you use custom animations */
+#barba-wrapper{
+  width: 100%;
+}
+.barba-container{
+  display: block;
+  position: static;
+  z-index: 10;
+}
+.comp__list--thumbnails{
+  .thumbnail{
+    display: flex;
+    &:hover{
+      cursor: pointer;
+    }
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 50px rgba(0,0,0,0);
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 0 50px rgba(0,0,0,0.2);
+        cursor: pointer;
+      }
+    }
+    .thumbnail--content{
+      position: absolute;
+      margin: auto;
+      p{
+        color: white;
+        font-weight: 600;
+      }
+    }
   }
+}
+.comp__back{
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  margin: $spacing--medium auto 0;
+  z-index: 99;
+  a.button{
 
-/* CSS animations */
-.Animated {
-  animation-fill-mode: both;
-  animation-duration: 1s;
+  }
 }
 
-  .Animated--reverse { animation-direction: reverse }
-
-  .Animate--fast { animation-duration: .5s }
-  .Animate--noDelay { animation-delay: 0s !important;  }
-
-  .Animate--slideInRight { animation-name: Animation-slideInRight }
-  @keyframes Animation-slideInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(100rem);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  .Animate--slideInLeft { animation-name: Animation-slideInLeft }
-  @keyframes Animation-slideInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-100rem);
-    }
-
-    100% {
-      transform: translateX(0);
+.comp__header{
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  .comp--content{
+    display: flex;
+    position: absolute;
+    margin: auto;
+    color: white;
+    width: 50%;
+    h1{
+      font-size: rem-calc(100px);
+      font-weight: 600;
+      text-align: center;
     }
   }
+  .comp--media{
+    top:0;
+    position: absolute;
+    width: 100%;
+    img{
+      width: 100%;
+      // max-width: initial;
+    }
+  }
+}

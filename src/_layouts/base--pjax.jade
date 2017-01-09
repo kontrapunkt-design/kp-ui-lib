@@ -16,6 +16,8 @@ doctype html
 
 block head
 - var title = title
+- var bodyClass = bodyClass
+
 head
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
@@ -25,22 +27,22 @@ head
   block stylesheets
     link(rel='stylesheet', href= baseUrl + 'styles/main.css')
 
-body
+body(class=bodyClass)
   <!--[if lt IE 9]>
   <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
   block navigation
-    .comp__navigation
-      ul
-        li
-          a(href="page--pjax-load--01.html") page one
-        li
-          a(href="page--pjax-load--02.html") page two
+    //- .comp__navigation
+    //-   ul
+    //-     li
+    //-       a(href="page--pjax-load--01.html") page one
+    //-     li
+    //-       a(href="page--pjax-load--02.html") page two
 
   block content
 
   block scripts
-    script(src= baseUrl + 'scripts/main.js')
+    script(src= baseUrl + 'scripts/main--pjax-load.js')
 
 </html>

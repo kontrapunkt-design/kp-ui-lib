@@ -1,0 +1,16 @@
+block head
+  - title = 'page title two'
+  - bodyClass = 'page-type--content'
+
+extends _layouts/base--pjax
+
+block content
+  #barba-wrapper
+    .container.barba-container(data-namespace="detail")
+      .comp__back
+        a.button(href="page--pjax-load--thumbnails.html") Overview
+      .comp__header
+        .comp--media
+          img(src="images/image02.jpg")
+        .comp--content
+          h1 Image title ABC
