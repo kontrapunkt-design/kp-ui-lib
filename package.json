@@ -42,6 +42,8 @@
     "gulp-util": "~3.0.7",
     "imagemin-pngquant": "~4.2.0",
     "imagemin-svgo": "~4.2.0",
+    "imagesloaded": "^4.1.1",
+    "isotope-layout": "^3.0.1",
     "jade": "~1.11.0",
     "js-yaml": "~3.5.2",
     "lodash": "~4.0.0",
@@ -82,6 +84,19 @@
     "entries": {
       "js": "main**.js",
       "css": "main**.{sass,scss}"
+    },
+    "browser": {
+      "jquery": "./node_modules/jquery/dist/jquery.js",
+      "foundation": "./node_modules/foundation-sites/dist/foundation.js"
+    },
+    "browserify-shim": {
+      "jquery": "jQuery",
+      "foundation": "foundation"
+    },
+    "browserify": {
+      "transform": [
+        "browserify-shim"
+      ]
     }
   }
 }

@@ -1,0 +1,36 @@
+.comp__collection--thumbnails{
+  display: block;
+  width: 100%;
+  .thumbnails-isotype-grid{
+    display: block;
+    position: absolute;
+    width: 100%;
+    .item{
+      a{
+        overflow: hidden;
+        display: block;
+        position: relative;
+        margin: 0 $spacing--small;
+        // height: 0;
+      }
+    }
+    .grid-sizer{
+      width: 25%;
+      @include breakpoint(large){
+        width: 20%;
+      }
+    }
+    .item.grid--large{
+      width:50%;
+      @include breakpoint(large){
+        width: 60%;
+      }
+    }
+    .item.grid--small{
+      width:50%;
+      @include breakpoint(large){
+        width: 40%;
+      }
+    }
+  }
+}
