@@ -4,11 +4,9 @@
 'use strict';
 
 import $ from 'jquery';
-// import Link from '../_modules/link/link';
-import compDropdownPath from './components/compDropdownPath';
+import compVideoControls from './components/compVideoControls';
 
 $(() => {
   // new Link(); // Activate Link modules logic
-  console.log('Welcome to Yeogurt!');
-  // compIsotopeVideo();
+  compVideoControls();
 });

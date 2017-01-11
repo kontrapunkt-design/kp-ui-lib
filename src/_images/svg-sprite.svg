@@ -1,7 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon--arrow--right" viewBox="0 0 9 18">
+    <g>
+        <polygon id="Rectangle-4" points="0.0208152802 13.9705627 0.0208152802 18.2132034 9.21320344 9.02081528 0.0208152802 -0.171572875 0.0208152802 4.07106781 4.97056275 9.02081528"></polygon>
+    </g>
+	</symbol>
   <symbol id="icon--play" viewBox="0 0 17 20">
 		<polygon points="17,10 0,20 0,0"/>
 	</symbol>
+  <symbol id="icon--menu--small" viewBox="0 0 16 10">
+    <g>
+        <rect id="Rectangle-5" x="0" y="0" width="16" height="2"></rect>
+        <rect id="Rectangle-5-Copy" x="0" y="4" width="16" height="2"></rect>
+        <rect id="Rectangle-5-Copy-2" x="0" y="8" width="16" height="2"></rect>
+    </g>
+  </symbol>
+  <symbol id="icon--menu--small--shown" viewBox="0 0 12 11">
+    <polygon points="7 6.82842712 7 0 5 1.2246468e-16 5 6.82842712 1.75735931 3.58578644 0.343145751 5 6 10.6568542 11.6568542 5 10.2426407 3.58578644 7 6.82842712"></polygon>
+  </symbol>
   <symbol id="icon--pause" viewBox="0 0 11 14">
 		<rect id="Rectangle-21" x="0" y="0" width="4" height="14"></rect>
 		<rect id="Rectangle-21-Copy" x="7" y="0" width="4" height="14"></rect>

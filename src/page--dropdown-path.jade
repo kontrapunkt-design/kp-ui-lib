@@ -1,0 +1,60 @@
+extends _layouts/base
+
+block scripts
+  script(src= baseUrl + 'scripts/main--dropdown-path.js')
+
+block content
+  .container
+    .row
+      .small-12.medium-8.column
+        .comp__dropdown-path
+          .path-list 
+            .path-list__title
+              a(href="#")
+                h5 Store
+              span.icon--arrow--right
+                svg
+                  use(xlink:href="images/svg-sprite.svg#icon--arrow--right")
+          .path-list 
+            .path-list__title
+              .switch.switch--icon
+                span.icon--menu--small
+                  svg
+                    use(xlink:href="images/svg-sprite.svg#icon--menu--small")
+                span.icon--menu--small--shown
+                  svg
+                    use(xlink:href="images/svg-sprite.svg#icon--menu--small--shown")
+              a(href="#")
+                h5 Man Department
+              span.icon--arrow--right
+                svg
+                  use(xlink:href="images/svg-sprite.svg#icon--arrow--right")
+            ul.path-list__level
+              li.level__item.item Accessories & Bags
+              li.level__item.item Woman Department
+              li.level__item.item.active Man Department
+              li.level__item.item Home & Designs
+              li.level__item.item Kids, Travel & Sports
+              li.level__item.item Rooftops
+          .path-list 
+            .path-list__title
+              .switch.switch--icon
+                span.icon--menu--small
+                  svg
+                    use(xlink:href="images/svg-sprite.svg#icon--menu--small")
+                span.icon--menu--small--shown
+                  svg
+                    use(xlink:href="images/svg-sprite.svg#icon--menu--small--shown")
+              a(href="#")
+                h5 Paul Smith
+            ul.path-list__level
+              li.level__item.item Armani Collezioni
+              li.level__item.item Hugo Boss
+              li.level__item.item Mads Nørgaard
+              li.level__item.item Filippa K
+              li.level__item.item Tiger of Sweden
+              li.level__item.item.active Paul Smith
+              li.level__item.item Woolrich
+              li.level__item.item Save The Duck
+              li.level__item.item Matinique
+              li.level__item.item Calvin Klein

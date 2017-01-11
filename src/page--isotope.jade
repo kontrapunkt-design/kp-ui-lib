@@ -1,6 +1,8 @@
 extends _layouts/base
 
-include _modules/link/link
+block scripts
+  script(src= baseUrl + 'scripts/main--isotope.js')
+
 
 block content
   .comp__collection--thumbnails

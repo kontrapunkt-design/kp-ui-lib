@@ -1,0 +1,78 @@
+.comp__dropdown-path{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:flex-start;
+  margin-top: $spacing--large;
+  .path-list{
+    align-content: center;
+    margin-right:$spacing--small;
+    .icon--arrow--right{
+      display: block;
+      width: 9px;
+      height: 18px;
+      svg{
+        fill:$medium-gray;
+      }
+    }
+    .switch--icon{
+      display: flex;
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      background-color: $primary-color;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+    }
+    .icon--menu--small{
+      position: absolute;
+      width: 12px;
+      height: 8px;
+      margin: auto;
+      svg{
+        fill:white;
+      }
+    }
+    .icon--menu--small--shown{
+      display: none;
+      position: absolute;
+      width: 12px;
+      height: 11px;
+      margin: auto;
+      svg{
+        fill:white;
+      }
+    }
+    .path-list__title{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      h5{
+        margin: 0 $spacing--small;
+      }
+    }
+    .path-list__level{
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding: $spacing--small 0 $spacing--medium 0;
+      .level__item{
+        padding: $spacing--small*0.5 $spacing--medium $spacing--small*0.5 $spacing--medium*1.5;
+        &.active{
+          color:$primary-color;
+        }
+      }
+    }
+  }
+  .path-list.hover{
+    .switch--icon{
+      .icon--menu--small{
+        display: none;
+      }
+      .icon--menu--small--shown{
+        display: block;
+      }
+    }
+  }
+}
