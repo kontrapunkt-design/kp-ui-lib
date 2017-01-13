@@ -8,7 +8,7 @@ block scripts
 block content
   .comp__type-test
     .comp--content
-      .row
+      .row.align-center
         .small-12.medium-8.large-6.column
           .type-test__header
             h1 Type test
@@ -21,14 +21,28 @@ block content
             p.label size
             .row
               .small-12.column
-                input(type="number" id="sliderOutput1")
+                input(type="number" id="sliderOutputFontSize")
               .small-12.column
-                .slider(data-slider data-initial-start="50")
-                  span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1")
+                #slider--font-size.slider(data-slider data-initial-start="21")
+                  span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutputFontSize")
                   span.slider-fill(data-slider-fill)
         .small-12.medium-6.large-4.column
           .controller__leading
             p.label leading
+            .row
+              .small-12.column
+                input(type="number" id="sliderOutputFontLeading")
+              .small-12.column
+                #slider--font-leading.slider(data-slider data-initial-start="30")
+                  span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutputFontLeading")
+                  span.slider-fill(data-slider-fill)
         .small-12.medium-6.large-4.column
-          .controller__weight
-            p.label weight
+          .controller__tracking
+            p.label tracking
+            .row
+              .small-12.column
+                input(type="number" id="sliderOutputFontTracking")
+              .small-12.column
+                #slider--font-tracking.slider(data-slider data-initial-start="5")
+                  span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutputFontTracking")
+                  span.slider-fill(data-slider-fill)

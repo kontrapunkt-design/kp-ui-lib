@@ -2,12 +2,28 @@
 
 export default ()=> {
   console.log('load comp typetest');
-  let fontSize = $('#sliderOutput1').val();
 
-  $('[data-slider]').on('moved.zf.slider', function() {
-    // console.log('Those slides sure did change!');
-    let fontSize = $('#sliderOutput1').val();
-    console.log(fontSize);
-    $('.type-test__paragraph p').css('font-size', fontSize + 'px');
+function getFontProperties () {
+    let fontSize = $('#sliderOutputFontSize').val();
+    let fontLeading = $('#sliderOutputFontLeading').val();
+    let fontTracking = $('#sliderOutputFontTracking').val()/10;
+    return {
+      fontSize: fontSize,
+      fontLeading: fontLeading,
+      fontTracking: fontTracking,
+    }
+}
+
+// console.log(getFontProperties().fontSize, getFontProperties().fontLeading);
+
+  $('#slider--font-size').on('moved.zf.slider', function() {
+    $('.type-test__paragraph p').css('font-size', getFontProperties().fontSize + 'px');
   });
+  $('#slider--font-leading').on('moved.zf.slider', function() {
+    $('.type-test__paragraph p').css('line-height', getFontProperties().fontLeading + 'px');
+  });
+  $('#slider--font-tracking').on('moved.zf.slider', function() {
+    $('.type-test__paragraph p').css('letter-spacing', getFontProperties().fontTracking + 'px');
+  });
+
 }
