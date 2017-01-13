@@ -1,0 +1,34 @@
+extends _layouts/base
+
+block scripts
+  script(src= baseUrl + 'scripts/main.js')
+  script(src= baseUrl + 'scripts/main--type-test.js')
+
+
+block content
+  .comp__type-test
+    .comp--content
+      .row
+        .small-12.medium-8.large-6.column
+          .type-test__header
+            h1 Type test
+          .type-test__paragraph
+            p Kontrapunkt is the leading Scandinavian design agency. Design is the magic we use to translate human needs and winning ideas into meaningful brand experiences that move, inspire and add to the greater good. We believe in the value of being genuine and always seek the true essence of a brand. We admire those, who have the courage to stand up for who they really are. In a world that is becoming more and more transparent, you need inspiring and honest brands, you feel like spending time with. Brands that foster lasting trust and loyalty.To serve our clients the best way possible, we work globally, have the brightest talents and engage a strong ecosystem of specialised partners. Today we are more than 50 specialists working out of our offices in Denmark and Japan.
+    .comp--controller
+      .row
+        .small-12.medium-6.large-4.column
+          .controller__size
+            p.label size
+            .row
+              .small-12.column
+                input(type="number" id="sliderOutput1")
+              .small-12.column
+                .slider(data-slider data-initial-start="50")
+                  span.slider-handle(data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1")
+                  span.slider-fill(data-slider-fill)
+        .small-12.medium-6.large-4.column
+          .controller__leading
+            p.label leading
+        .small-12.medium-6.large-4.column
+          .controller__weight
+            p.label weight

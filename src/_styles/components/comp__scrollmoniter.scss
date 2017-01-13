@@ -5,4 +5,19 @@
   width: 80%;
   height: 30vh;
   background-color: $primary-color;
+  opacity: 0;
+  transform: translate3d(0,50px,0) scale(0.9);
+  transition: all 0.2s $global-easeing;
+  &.entering{
+    transform: translate3d(0,50px,0) scale(0.9);
+    opacity: 0;
+  }
+  &.entered{
+    transform: translate3d(0,0,0) scale(1);
+    opacity: 1;
+  }
+  &.exit{
+    transform: translate3d(0,-50px,0) scale(0.9);
+    opacity: 0;
+  }
 }

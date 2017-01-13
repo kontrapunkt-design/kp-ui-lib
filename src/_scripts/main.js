@@ -5,9 +5,12 @@
 
 import $ from 'jquery';
 // import Link from '../_modules/link/link';
-import compDropdownPath from './components/compDropdownPath';
+import foundationPlugins from './components/foundationPlugins';
+// import compDropdownPath from './components/compDropdownPath';
 
 $(() => {
+  $(document).foundation();
+
   // new Link(); // Activate Link modules logic
   console.log('Welcome to Yeogurt!');
   // compIsotopeVideo();
